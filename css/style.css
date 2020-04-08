@@ -340,8 +340,9 @@ nav li {
 .phase {
     display: block;
     width: 100%;
-    margin-right: auto;
+    margin-right: 1rem auto 1rem auto;
     width: 28rem;
+
 
 }
 
