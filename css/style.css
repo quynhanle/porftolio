@@ -83,6 +83,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: bold;
+    line-height: 1.2;
 
 }
 
@@ -213,7 +214,7 @@ nav li {
     flex: 2;
     flex-grow: 1;
     flex-shrink: 1;
-    display: block;
+    display: inline-block;
     padding-bottom: auto;
 
 }
@@ -226,9 +227,13 @@ nav li {
 .image {
     display: block;
     flex: 1;
-    margin-left: 32px;
+    margin-left: auto;
     flex-grow: 1;
     flex-shrink: 1;
+    overflow: hidden;
+    max-height: 382px;
+    max-width: 608px;
+    align-content: flex-start;
 
 
 }
@@ -260,7 +265,7 @@ nav li {
 
 
 .date {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "Poppins";
     font-weight: 100;
     color: #828282;
