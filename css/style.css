@@ -150,6 +150,21 @@ nav a:hover {
 }
 
 
+li {
+    font-size: 1rem;
+    font: 'Helvetica';
+    margin-bottom: 0.5rem;
+    display: list-item;
+    list-style-position: inside;
+    list-style-type: decimal;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    padding-left: 4px;
+
+}
 
 /*Homepage*/
 /*Header*/
@@ -298,8 +313,8 @@ nav li {
 
 .summary {
     display: flex;
-    margin: 0 auto 0 auto;
-    background-color: #F7F6F4;
+    margin: 20px auto 100px auto;
+    background-color: white;
     align-items: flex-start;
     justify-content: center;
 
