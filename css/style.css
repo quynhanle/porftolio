@@ -1,5 +1,11 @@
 /*reset*/
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -9,8 +15,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 
@@ -23,7 +29,7 @@ time, mark, audio, video {
 
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -65,7 +71,7 @@ html {
     font-family: Helvetica, Arial, sans-serif;
     color: #383643;
 
-} 
+}
 
 
 h1 {
@@ -77,13 +83,14 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: bold;
+    line-height: 1.2;
 
 }
 
 h3 {
     font-size: 1.125rem;
     font-weight: bold;
-    letter-spacing: 0.5px;
+    letter-spacing: 0px;
 
 
 }
@@ -125,14 +132,10 @@ p {
     letter-spacing: -0.09375rem;
     min-width: 3.75rem;
     cursor: pointer;
-}
-
-.logo:hover {
-    text-decoration: none;
-    color: #177C82;
-    transition: 100ms ease-in 100ms;
+    transition: none;
 
 }
+
 
 a {
     color: #383643;
@@ -147,6 +150,21 @@ nav a:hover {
 }
 
 
+li {
+    font-size: 1rem;
+    font: 'Helvetica';
+    margin-bottom: 0.5rem;
+    display: list-item;
+    list-style-position: inside;
+    list-style-type: decimal;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    padding-left: 4px;
+
+}
 
 /*Homepage*/
 /*Header*/
@@ -199,6 +217,7 @@ nav li {
     margin: 3.5rem auto 2.5rem auto;
     max-width: 58rem;
     display: flex;
+    transition: all 800ms ease-in-out;
 }
 
 .project a {
@@ -210,9 +229,9 @@ nav li {
     flex: 2;
     flex-grow: 1;
     flex-shrink: 1;
-    display: block;
+    display: inline-block;
     padding-bottom: auto;
-    
+
 }
 
 .bold {
@@ -223,20 +242,32 @@ nav li {
 .image {
     display: block;
     flex: 1;
-    margin-left: 32px;
+    margin-left: auto;
     flex-grow: 1;
     flex-shrink: 1;
+    overflow: hidden;
+    max-height: 382px;
+    max-width: 608px;
+    align-content: flex-start;
+
 
 }
 
+.image:hover {
+    transform: scale(1.0.25);
+    transition: 400ms ease-in-out;
+
+}
 
 .title a h2, h5, h6 {
     cursor: pointer;
 
 }
 
-.title a:hover {
-    color: red;
+.project:hover h2, .project:hover p {
+    color: #177C82;
+    transition: 400ms ease-in-out;
+
 }
 
 .company {
@@ -249,7 +280,7 @@ nav li {
 
 
 .date {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "Poppins";
     font-weight: 100;
     color: #828282;
@@ -282,8 +313,8 @@ nav li {
 
 .summary {
     display: flex;
-    margin: 0 auto 0 auto;
-    background-color: #F7F6F4;
+    margin: 20px auto 100px auto;
+    background-color: white;
     align-items: flex-start;
     justify-content: center;
 
@@ -298,7 +329,7 @@ nav li {
 
 
 .section-title {
-    padding-bottom: 0.5rem; 
+    padding-bottom: 0.5rem;
     margin: 0rem;
     line-height: 1.25rem;
 }
@@ -315,7 +346,7 @@ nav li {
 .text {
     display: flex;
     max-width: 58rem;
-    margin: 0 auto 0 auto;
+    margin: 1.5rem auto 1.5rem auto;
     justify-content: flex-end;
     align-items: baseline;
 
@@ -324,8 +355,9 @@ nav li {
 .phase {
     display: block;
     width: 100%;
-    margin-right: auto;
+    margin: 1rem auto 1rem 0;
     width: 28rem;
+
 
 }
 
@@ -378,9 +410,57 @@ p.my-role, p.process {
 }
 
 .contextual-image {
-    display: flex;
+    display: block;
     max-width: 58rem;
     margin: 0 auto 0 auto;
+}
+
+.two-images {
+    display: flex;
+    max-width: 58rem;
+    justify-content: flex-start;
+    margin: 0 auto 0 auto;
+
+}
+
+/*footer*/
+
+
+footer {
+    height: 1.625rem;
+    margin: 15rem auto 2.5rem auto;
+    max-width: 58rem;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+footer li {
+    font-size: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #383643;
+    box-sizing: border-box;
+    padding: 0 1rem 0 0;
+    display: inline-block;
+    
+}
+
+
+.copyright {
+    box-sizing: border-box;
+    margin-left: auto;
+    padding: 0 0rem;
+    display: block;
+    color: #BDBDBD;
+    font-size: 0.85rem;
+    font-family: 'poppins';
+    font-weight: lighter;
+    
 }
 
 
@@ -409,4 +489,7 @@ header {
     margin-top: 2rem;
 }
 
+footer li, .copyright {
+    padding: 0 1rem;
 
+}
